@@ -6,24 +6,24 @@ body {
   width: 85%;
   padding: 0;
   border: none;
-  background: black;
-  color: white;
+  background: #222;
+  color: #fff;
   position: relative;
 }
 .container a {
-	color: white;
+	color: #fff;
 }
 /* -------- HEADER ------- */
 .header {
 	background: #0099ff;	
-	color: white;
+	color: #fff;
 	font-weight: 300;
 	width: 100%;
 	margin: 4px auto;
 }
 .header a {
 	display: inline-block;
-	color: white;
+	color: #fff;
 	font-size: small;
 	vertical-align: top;
 	margin-top: 2px;
@@ -33,18 +33,31 @@ body {
 	width: 580px;
 	padding: 4px 4px 0 4px;
 	vertical-align: top;
+}
+.site-info a {
+	text-decoration: none;
+	font-size: medium;
 	letter-spacing: 1px;
+	margin: 0;
+	padding-left: 2px;
 }
 .site-info img {
-	border: 1px solid black;
+	border: 1px solid #222;
 	margin-right: 2px;
 }
 .user-info {
 	display: inline-block;
-	width: 188px;
+	float: right;
 	text-align: right;
 	padding: 4px;
-	vertical-align: top;
+}
+.user-info a {
+	color: #fff;
+	text-decoration: none;
+}
+.user-info a:hover {
+	color: #fff;
+	text-decoration: underline;
 }
 /* ------- LOGIN -------- */
 .login {
@@ -71,8 +84,8 @@ body {
 	width: auto;
 	letter-spacing: 0;
 	border: none;
-	background: white;
-	color: black;
+	background: #fff;
+	color: #222;
 }
 .login p {
 	padding: 16px 4px;
@@ -81,7 +94,8 @@ body {
 	color: #ccc;
 }
 .login a {
-	color: white;
+	margin: 0;
+	color: #ccc;
 }
 /* ------- POSTS -------- */
 ol {
@@ -96,11 +110,11 @@ li .title {
 	font-weight: 100;
 }
 .post a {
-	color: white;
+	color: #fff;
 	text-decoration: none;
 }
 .post a:hover {
-	color: white;
+	color: #fff;
 	text-decoration: underline;
 }
 .post .meta {
@@ -110,4 +124,51 @@ li .title {
 .separator {
 	background: #0099ff;
 	height: 5px;
+}
+/* ----- FULL POSTS ----- */
+.content {
+	margin: 6px 0 20px 0;
+	font-size: small;
+}
+.comments {
+	font-size: small;	
+}
+.comments .meta {
+	font-size: x-small;
+	font-weight: 300;
+	margin-top: 10px;
+	padding: 2px 0;
+}
+.comments p {
+	margin: 0;
+}
+/* ----- PROFILE ----- */
+.profile h1 {
+	font-size: medium;
+	font-weight: 500;
+}
+.profile p {
+	font-size: small;
+}
+.profile a {
+	font-size: small;
+	display: block;
+}
+/* ----- SIGN UP ----- */
+.signup input {
+	display: block;
+	padding: 1px 6px;
+	margin: 4px 2px;
+	font-size: 10pt;
+	letter-spacing: 1px;
+	width: 92px;
+	border: none;
+}
+.signup input[type="submit"] {
+	border-radius: 0;
+	width: auto;
+	letter-spacing: 0;
+	border: none;
+	background: #fff;
+	color: #222;
 }

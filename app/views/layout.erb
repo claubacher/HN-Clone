@@ -20,10 +20,12 @@
 <body>
   <div class="container">
     <div class="header">
-      <span class="site-info"><img src="/images/bizarro_y.png">Bizarro Hacker News</span>
-      <% unless session[:user_id] == nil %>
+      <span class="site-info"><img src="/images/bizarro_y.png"><a href="/">Bizarro Hacker News</a></span>
+      <% if session[:user_id] == nil %>
+        <%= erb :login %>
+      <% else %>
         <span class="user-info"><a href="/users/<%= session[:user_id] %>"><%= User.find(session[:user_id]).name %></a> | <a href="/logout">logout</a></span>
-        <% end %>
+      <% end %>
     </div>
     <%= yield %>
     <div class="separator"></div>

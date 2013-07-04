@@ -1,6 +1,6 @@
 get '/' do
   @posts = Post.all
-  erb :index
+  erb :posts
 end
 
 post '/login' do
@@ -52,11 +52,13 @@ get '/users/:id' do
 end
 
 get '/users/:id/posts' do
-  @posts = User.find(params[:id]).posts
+  @user = User.find(params[:id])
+  @posts = @user.posts
   erb :posts
 end
 
 get '/users/:id/comments' do
-  @comments = User.find(params[:id]).comments
+  @user = User.find(params[:id])
+  @comments = @user.comments
   erb :comments
 end

@@ -1,13 +1,12 @@
-<div class="container">
-  <h1>Sign Up</h1>
+<div class="signup container">
   <% if @errors %>
   	<% @errors.each do |error| %>
 	    <p> <%= error %> </p>
     <% end %>
   <% end %>
   <form method="post" action="/create_user">
-    <input type="text" name="name" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Sign Up">
+    <input type="text" name="name" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <input type="submit" value="sign up">
   </form>
 </div>

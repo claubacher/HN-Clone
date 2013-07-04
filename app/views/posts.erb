@@ -1,4 +1,4 @@
-<% if @posts %>
+<% if @posts.any? %>
 <ol>
 	<% @posts.each do |post| %>
 	<li class="post">
@@ -12,4 +12,8 @@
 	</li>
 	<% end %>
 </ol>
+<% else %>
+<div class="container">
+	<p><%= @user.name %> hasn't made any posts yet.</p>
+</div>
 <% end %>

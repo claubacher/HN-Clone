@@ -1,19 +1,21 @@
 <% if @post %>
 	<div class="post container">
-		<h3><%= @post.title %></h3>
-		<a class="user" href="/users/<%= @post.user.id %>"><%= @post.user.name %></a>
-		<span><%= @post.created_at %></span>
-		<span><%= @post.updated_at %></span>
-		<p><%= @post.content %></p>
+		<div class="title"><%= @post.title %></div>
+		<div class="meta">
+			Posted by <a href="/users/<%= @post.user.id %>"><%= @post.user.name %></a>
+			<span><%= ((Time.now - @post.created_at)/60).floor %> minutes ago</span> | <%= @post.comments.count %> Comments
+		</div>
+		<div class="content"><%= @post.content %></div>
 	</div>
-	Comments:
-	<div class = "comments container">
-		<% @post.comments.each do |comment| %>
-			<div class="meta">
-				<a class="user" href="/users/<%= comment.user.id %>"><%= comment.user.name %></a>
-				<span><%= comment.created_at %></span>
-				<span><%= comment.updated_at %></span>
-			</div>
-			<p><%= comment.content %></p>
-		<% end %>
+	<% unless @post.comments.empty? %>
+		<div class="comments container">Comments:
+			<% @post.comments.each do |comment| %>
+				<div class="meta">
+					Posted by <a class="user" href="/users/<%= comment.user.id %>"><%= comment.user.name %></a>
+					<span><%= ((Time.now - comment.created_at)/60).floor %> minutes ago
+				</div>
+				<p><%= comment.content %></p>
+			<% end %>
+		</div>
+	<% end %>
 <% end %>

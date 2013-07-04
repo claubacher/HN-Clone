@@ -1,7 +1,9 @@
 <% if @user %>
-	<div class="container">
-		<%= @user.name %>
-		<a href="/users/<%= @user.id %>/posts">Posts</a>
-		<a href="/users/<%= @user.id %>/comments">Comments</a>
+	<div class="profile container">
+		<h1><%= @user.name %></h1>
+		<% days = ((Time.now - @user.created_at)/(60*60*24)).floor %>
+		<p>Joined <%= days %> day<%= "s" if days != 1 %> ago</p>
+		<a href="/users/<%= @user.id %>/posts">View Posts</a>
+		<a href="/users/<%= @user.id %>/comments">View Comments</a>
 	</div>
 <% end %>
