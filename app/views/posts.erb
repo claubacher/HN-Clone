@@ -1,0 +1,10 @@
+<% if @posts %>
+	<% @posts.each do |post| %>
+		<div class="post container">
+			<a class="title" href="/posts/<%= post.id %>"><%= post.title %></a>
+			<a class="user" href="/users/<%= post.user.id %>"><%= post.user.name %></a>
+			<span><%= post.created_at %></span>
+			<span><%= post.updated_at %></span>
+		</div>
+	<% end %>
+<% end %>

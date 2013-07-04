@@ -1,0 +1,7 @@
+<% if @user %>
+	<div class="container">
+		<%= @user.name %>
+		<a href="/users/<%= @user.id %>/posts">Posts</a>
+		<a href="/users/<%= @user.id %>/comments">Comments</a>
+	</div>
+<% end %>
