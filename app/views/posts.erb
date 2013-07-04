@@ -6,10 +6,8 @@
 			<a href="/posts/<%= post.id %>"><%= post.title %></a>
 		</div>
 		<div class="meta">
-			<a href="/users/<%= post.user.id %>"><%= post.user.name %></a>
-			<span>Posted <%= ((Time.now - post.created_at)/60).floor %> minutes ago</span>
-			<!-- <span><%= post.updated_at %></span> -->
-			<a href="/posts/<%= post.id %>"><%= post.comments.count %> Comments</a>
+			Posted by <a href="/users/<%= post.user.id %>"><%= post.user.name %></a>
+			<span><%= ((Time.now - post.created_at)/60).floor %> minutes ago</span> | <a href="/posts/<%= post.id %>"><%= post.comments.count %> Comments</a>
 		</div>
 	</li>
 	<% end %>

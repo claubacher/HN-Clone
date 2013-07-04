@@ -3,19 +3,25 @@ body {
 }
 .container {
   margin: 20px auto;
-  width: 800px;
+  width: 85%;
   padding: 0;
   border: none;
   background: black;
   color: white;
+  position: relative;
+}
+.container a {
+	color: white;
 }
 /* -------- HEADER ------- */
-header {
+.header {
 	background: #0099ff;	
 	color: white;
 	font-weight: 300;
+	width: 100%;
+	margin: 4px auto;
 }
-header a {
+.header a {
 	display: inline-block;
 	color: white;
 	font-size: small;
@@ -25,23 +31,69 @@ header a {
 .site-info {
 	display: inline-block;
 	width: 580px;
-	padding: 6px;
+	padding: 4px 4px 0 4px;
 	vertical-align: top;
+	letter-spacing: 1px;
 }
 .site-info img {
 	border: 1px solid black;
-	margin: 0 6px 0 2px;
+	margin-right: 2px;
 }
 .user-info {
 	display: inline-block;
 	width: 188px;
 	text-align: right;
-	padding: 6px;
+	padding: 4px;
 	vertical-align: top;
 }
+/* ------- LOGIN -------- */
+.login {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: right;
+}
+.login input {
+	float: left;
+	padding: 1px 6px;
+	margin: 4px 2px;
+	font-size: 10pt;
+	letter-spacing: 1px;
+	width: 72px;
+	border: none;
+}
+.login input:focus { 
+	outline: none; 
+}
+.login input[type="submit"] {
+	margin-right: 4px;
+	border-radius: 0;
+	width: auto;
+	letter-spacing: 0;
+	border: none;
+	background: white;
+	color: black;
+}
+.login p {
+	padding: 16px 4px;
+	font-size: 10pt;
+	letter-spacing: 1px;
+	color: #ccc;
+}
+.login a {
+	color: white;
+}
 /* ------- POSTS -------- */
+ol {
+	margin: 20px;
+}
 li {
+	font-size: medium;
 	font-weight: 300;
+	padding: 2px;
+}
+li .title {
+	font-weight: 100;
 }
 .post a {
 	color: white;
@@ -53,4 +105,9 @@ li {
 }
 .post .meta {
 	font-size: x-small;
+}
+/* ------- FOOTER -------- */
+.separator {
+	background: #0099ff;
+	height: 5px;
 }
