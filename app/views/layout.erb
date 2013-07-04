@@ -15,15 +15,17 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Bizarro Hacker News</title>
 </head>
 <body>
-  <nav>
-    <% unless session[:user_id] == nil %>
-      <span>Logged in as: <%= User.find(session[:user_id]).name %></span>
-      <a href="/logout">Log Out</a>
-    <% end %>
-  </nav>
-  <%= yield %>
+  <div class="container">
+    <header>
+      <span class="site-info"><img src="/images/bizarro_y.png">Bizarro Hacker News</span>
+      <% unless session[:user_id] == nil %>
+        <span class="user-info"><a href="/users/<%= session[:user_id] %>"><%= User.find(session[:user_id]).name %></a> | <a href="/logout">logout</a></span>
+        <% end %>
+    </header>
+    <%= yield %>
+  </div>
 </body>
 </html>

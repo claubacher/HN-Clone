@@ -1,9 +1,56 @@
+body {
+	font-family: Verdana, sans-serif;
+}
 .container {
   margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  width: 800px;
+  padding: 0;
+  border: none;
+  background: black;
+  color: white;
 }
-th {
-  text-align: left;
+/* -------- HEADER ------- */
+header {
+	background: #0099ff;	
+	color: white;
+	font-weight: 300;
+}
+header a {
+	display: inline-block;
+	color: white;
+	font-size: small;
+	vertical-align: top;
+	margin-top: 2px;
+}
+.site-info {
+	display: inline-block;
+	width: 580px;
+	padding: 6px;
+	vertical-align: top;
+}
+.site-info img {
+	border: 1px solid black;
+	margin: 0 6px 0 2px;
+}
+.user-info {
+	display: inline-block;
+	width: 188px;
+	text-align: right;
+	padding: 6px;
+	vertical-align: top;
+}
+/* ------- POSTS -------- */
+li {
+	font-weight: 300;
+}
+.post a {
+	color: white;
+	text-decoration: none;
+}
+.post a:hover {
+	color: white;
+	text-decoration: underline;
+}
+.post .meta {
+	font-size: x-small;
 }
